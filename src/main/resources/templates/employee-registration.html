@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script type="text/javascript" src="../js/employee-tracker.js"></script>
+</head>
+    <body>
+        <div class="container">
+            <br>
+            <p class="text-center">Employee Tracker Application</a></p>
+            <hr>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title mt-2">Register Here</h4>
+                        </header>
+                        <article class="card-body">
+                            <form id="registration-form" name="registration-form">
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label>User Name </label>
+                                        <input type="text" class="form-control" id="username" placeholder="">
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>First name </label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="">
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Last name</label>
+                                        <input type="text" class="form-control" id="lastname" placeholder=" ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="">
+                                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" id="submitBtn" class="btn btn-primary btn-block"
+                                       onclick="saveEmployee()" >
+                                        Register
+                                    </button>
+                                </div>
+                                <small class="text-muted">By clicking the 'Register', we'll create a new record for this employee</small>
+                                <div class="form-group">
+                                    <label><p th:text="${msg}"/></label>
+                                </div>
+                            </form>
+                        </article>
+                        <div class="border-top card-body text-center">Search Employee? <a href="">Log In</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
